@@ -18,6 +18,13 @@ const createStore = (initial, reducer) => {
 
     }
 
+    /**
+     * 
+     * @param {*} action 
+     */
+    const dispatch = (action) => {
+        state = reducer(state, action, actions)
+    }
     
 
 }
