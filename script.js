@@ -1,37 +1,25 @@
-
 /**
- * @type {object} - Count
+ * Creates The Store
+ * @param {*} initial 
+ * @param {*} reducer 
  */
 
-const initialState = {
-    count : 0,
+const createStore = (initial, reducer) => {
+    let state = initial
+    const actions = [];
+
+    /**
+     * Push in an Object of this param in actions []
+     * @param {*} action 
+     * @param {*} callback 
+     */
+    const subscribe = (action, callback) => {
+        actions.push({action, callback})
+
+    }
+
+    
+
 }
 
-/**
- * 
- * @param {*} state 
- * @param {*} action 
- * @returns {number}
- */
-const reducerFunc = (state = initialState, action) => {
-  if (action.type === "ADD") {
-    return {
-      ...state,
-      count: state.count + 1,
-    };
-  } else if (action.type === "SUBTRACT") {
-    return {
-      ...state,
-      count: state.count - 1,
-    };
-  } else {
-    return state;
-  }
-};
-
-/**
- * Create Store
- */
-
-const store = Redux.createStore(reducerFunc)
 
