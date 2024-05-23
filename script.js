@@ -30,7 +30,7 @@ const createStore = (initial, reducer) => {
         return state;
     }
 
-    
+    return {subscribe, dispatch, getState}
 
 }
 
