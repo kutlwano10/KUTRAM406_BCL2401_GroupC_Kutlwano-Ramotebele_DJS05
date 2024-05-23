@@ -25,6 +25,11 @@ const createStore = (initial, reducer) => {
     const dispatch = (action) => {
         state = reducer(state, action, actions)
     }
+
+    const getState = () => {
+        return state;
+    }
+
     
 
 }
